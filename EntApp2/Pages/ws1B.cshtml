@@ -1,0 +1,29 @@
+﻿@page
+@model EntApp2.Pages.ws1BModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ws1B</title>
+</head>
+<body>
+    <form method="post" style="border:solid 1px; border-color :blue;  border-radius:10px; padding:5px; width:600px;">
+        <label for="label">N1</label>
+        <input type="number" id="n1" name="n1" />
+        <label for="label">N2</label>
+        <input type="number" id="n2" name="n2" />
+        <button type="submit"> Execute</button><br />
+        <input type="radio" name="operation" value="add" />Add
+        <input type="radio" name="operation" value="sub"  style="margin-left:100px;"/>Substract
+        <input type="radio" name="operation" value="mul"  style="margin-left:100px;"/>Multiply
+        <input type="radio" name="operation" value="div"  style="margin-left:100px;"/>Divide
+        <h2>@Model.Message</h2>
+    </form>
+</body>
+</html>
