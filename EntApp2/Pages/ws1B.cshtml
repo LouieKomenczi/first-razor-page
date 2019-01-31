@@ -14,10 +14,10 @@
 </head>
 <body>
     <form method="post" style="border:solid 1px; border-color :blue;  border-radius:10px; padding:5px; width:600px;">
-        <label for="label">N1</label>
-        <input type="number" id="n1" name="n1" value=@Model.N1 />
-        <label for="label">N2</label>
-        <input type="number" id="n2" name="n2" value=@Model.N2 />
+        <label asp-for=N1>N1</label>
+        <input asp-for=N1 />
+        <label asp-for=N2>N2</label>
+        <input asp-for=N2 />
         <button type="submit"> Execute</button><br />
         <input type="radio" name="operation" value="add" />Add
         <input type="radio" name="operation" value="sub"  style="margin-left:100px;"/>Substract
