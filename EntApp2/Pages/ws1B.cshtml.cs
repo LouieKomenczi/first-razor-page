@@ -10,7 +10,10 @@ namespace EntApp2.Pages
     public class ws1BModel : PageModel
     {
         public string Message { get; set; }
-
+        [BindProperty]
+        public int N1 { get; set; }
+        [BindProperty]
+        public int N2 { get; set; }
         public void OnGet()
         {
 
@@ -18,30 +21,30 @@ namespace EntApp2.Pages
 
         public void OnPost()
         {
-            var n1 = Convert.ToInt32(Request.Form["n1"]);
-            var n2 = Convert.ToInt32(Request.Form["n2"]);
+            var N1 = Convert.ToInt32(Request.Form["N1"]);
+            var N2 = Convert.ToInt32(Request.Form["N2"]);
             var op = Request.Form["operation"];
             if (op == "add")
             {
-                Message = Convert.ToString(n1) + " + " + Convert.ToString(n2) + " = " + Convert.ToString(n1 + n2);
+                Message = Convert.ToString(N1) + " + " + Convert.ToString(N2) + " = " + Convert.ToString(N1 + N2);
             }
             if (op == "sub")
             {
-                Message = Convert.ToString(n1) + " - " + Convert.ToString(n2) + " = " + Convert.ToString(n1 - n2);
+                Message = Convert.ToString(N1) + " - " + Convert.ToString(N2) + " = " + Convert.ToString(N1 - N2);
             }
             if (op == "mul")
             {
-                Message = Convert.ToString(n1) + " * " + Convert.ToString(n2) + " = " + Convert.ToString(n1 * n2);
+                Message = Convert.ToString(N1) + " * " + Convert.ToString(N2) + " = " + Convert.ToString(N1 * N2);
             }
             if (op == "div")
             {
-                if(n2 == 0)
+                if(N2 == 0)
                 {
                     Message = "Divison by 0 not possibe ";
                 }
                 else
                 {
-                    Message = Convert.ToString(n1) + " / " + Convert.ToString(n2) + " = " + Convert.ToString(n1 / n2);
+                    Message = Convert.ToString(N1) + " / " + Convert.ToString(N2) + " = " + Convert.ToString(N1 / N2);
                 }           
                 
             }
