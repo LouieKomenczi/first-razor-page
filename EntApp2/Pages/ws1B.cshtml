@@ -19,10 +19,20 @@
         <label asp-for=N2>N2</label>
         <input asp-for=N2 />
         <button type="submit"> Execute</button><br />
-        <input type="radio" name="operation" value="add" />Add
-        <input type="radio" name="operation" value="sub"  style="margin-left:100px;"/>Substract
-        <input type="radio" name="operation" value="mul"  style="margin-left:100px;"/>Multiply
-        <input type="radio" name="operation" value="div"  style="margin-left:100px;"/>Divide
+        <label for="add">
+            <input type="radio" name="operation" value="add" id="add"/>Add
+        </label>
+        <label for="sub">
+            <input type="radio" name="operation" value="sub" id="sub" style="margin-left:100px;" />Substract
+        </label>
+        <label for="mul">
+            <input type="radio" name="operation" value="mul" id="mul" style="margin-left:100px;" />Multiply
+        </label>
+        <label for="div">
+            <input type="radio" name="operation" value="div" id="div" style="margin-left:100px;" />Divide
+        </label>
+              
+        
         <h2>@Model.Message</h2>
     </form>
 </body>

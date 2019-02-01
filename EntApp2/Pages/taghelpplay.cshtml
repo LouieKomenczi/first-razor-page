@@ -1,0 +1,85 @@
+﻿@page
+@model EntApp2.Pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+
+    <form method="post">
+        <label asp-for=Number1>Enter int</label>
+        <input asp-for=Number1 /> <br />
+        <label asp-for=Number2>Enter int with ?</label>
+        <input asp-for=Number2 /><br />
+        <label asp-for=Number3>Enter double</label>
+        <input asp-for=Number3 /><br />
+        <label asp-for=Number4>Enter double with ?</label>
+        <input asp-for=Number4 /><br />
+        <label asp-for=Number5>Enter decimal</label>
+        <input asp-for=Number5 /><br />
+        <label asp-for=Number6>Enter decimal with ?</label>
+        <input asp-for=Number6 /><br />
+        <label asp-for=Number7>Enter float</label>
+        <input asp-for=Number7 /><br />
+        <label asp-for=Number8>Enter float with ?</label>
+        <input asp-for=Number8 /><br />
+        <label asp-for=String1>Enter string</label>
+        <input asp-for=String1 /><br />
+
+        <!--not working
+    <label asp-for=Datetime1>Enter datetime</label>
+    <input asp-for=Datetime1 /><br />
+    <label asp-for=IsContactAllowed></label>
+    <input asp-for=IsContactAllowed  /><br />
+
+    <label for="Winter">
+        <input value="Winter" id="Winter" type="radio" asp-for="Season">Winter
+    </label>
+    <label for="Spring">
+        <input value="Spring" id="Spring" type="radio" asp-for="Season">Spring
+    </label>
+    <label for="Summer">
+        <input value="Summer" id="Summer" type="radio" asp-for="Season">Summer
+    </label>
+    <label for="Autumn">
+        <input value="Autumn" id="Autumn" type="radio" asp-for="Season">Autumn
+    </label>
+    up to here-->
+
+        <label name="Datetime1">Enter datetime</label>
+        <input type="datetime-local" id="Datetime1" name="Datetime1" /><br />
+
+        <label name="IsContactAllowed">IsContactAllowed</label>
+        <input type="checkbox" id="IsContactAllowed" name="IsContactAllowed" value="True" /><br />
+
+        <label for="Winter">
+            <input value="Winter" id="Winter" type="radio" name="Season">Winter
+        </label>
+        <label for="Spring">
+            <input value="Spring" id="Spring" type="radio" name="Season">Spring
+        </label>
+        <label for="Summer">
+            <input value="Summer" id="Summer" type="radio" name="Season">Summer
+        </label>
+        <label for="Autumn">
+            <input value="Autumn" id="Autumn" type="radio" name="Season">Autumn
+        </label>
+
+        <button type="submit"> Submit</button>
+
+        <br />
+        <h3>@Model.Season  selected <br /> @Model.IsContactAllowed</h3>
+      
+    </form>
+
+</body>
+</html>

@@ -11,9 +11,9 @@ namespace EntApp2.Pages
     {
         public string Message { get; set; }
         [BindProperty]
-        public int N1 { get; set; }
+        public int? N1 { get; set; }
         [BindProperty]
-        public int N2 { get; set; }
+        public int? N2 { get; set; }
         public void OnGet()
         {
 
