@@ -35,44 +35,25 @@
         <label asp-for=String1>Enter string</label>
         <input asp-for=String1 /><br />
 
-        <!--not working
-    <label asp-for=Datetime1>Enter datetime</label>
-    <input asp-for=Datetime1 /><br />
-    <label asp-for=IsContactAllowed></label>
-    <input asp-for=IsContactAllowed  /><br />
-
-    <label for="Winter">
-        <input value="Winter" id="Winter" type="radio" asp-for="Season">Winter
-    </label>
-    <label for="Spring">
-        <input value="Spring" id="Spring" type="radio" asp-for="Season">Spring
-    </label>
-    <label for="Summer">
-        <input value="Summer" id="Summer" type="radio" asp-for="Season">Summer
-    </label>
-    <label for="Autumn">
-        <input value="Autumn" id="Autumn" type="radio" asp-for="Season">Autumn
-    </label>
-    up to here-->
-
-        <label name="Datetime1">Enter datetime</label>
-        <input type="datetime-local" id="Datetime1" name="Datetime1" /><br />
-
-        <label name="IsContactAllowed">IsContactAllowed</label>
-        <input type="checkbox" id="IsContactAllowed" name="IsContactAllowed" value="True" /><br />
+      
+        <label asp-for=Datetime1>Enter datetime</label>
+        <input asp-for=Datetime1 /><br />
+        <label asp-for=IsContactAllowed></label>
+        <input asp-for=IsContactAllowed  /><br />
 
         <label for="Winter">
-            <input value="Winter" id="Winter" type="radio" name="Season">Winter
+            <input value="Winter" id="Winter" type="radio" asp-for="Season">Winter
         </label>
         <label for="Spring">
-            <input value="Spring" id="Spring" type="radio" name="Season">Spring
+            <input value="Spring" id="Spring" type="radio" asp-for="Season">Spring
         </label>
         <label for="Summer">
-            <input value="Summer" id="Summer" type="radio" name="Season">Summer
+            <input value="Summer" id="Summer" type="radio" asp-for="Season">Summer
         </label>
         <label for="Autumn">
-            <input value="Autumn" id="Autumn" type="radio" name="Season">Autumn
+            <input value="Autumn" id="Autumn" type="radio" asp-for="Season">Autumn
         </label>
+       
 
         <button type="submit"> Submit</button>
 
