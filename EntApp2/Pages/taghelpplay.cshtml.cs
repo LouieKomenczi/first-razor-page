@@ -49,6 +49,8 @@ namespace EntApp2.Pages
 
         public string Message { get; set; }
 
+        
+
         public void OnPost()
         {
                   

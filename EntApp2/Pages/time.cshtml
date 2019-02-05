@@ -1,0 +1,32 @@
+﻿@page
+@model EntApp2.Pages.timeModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>time</title>
+</head>
+<body>
+    <form method="post">
+        @for (int i = 0; i < Model.Days.Length; i++)
+        {
+            <input type="checkbox" asp-for=DaysSelected[i]>
+            <label asp-for=DaysSelected[i]>@Model.Days[i]</label>
+        }
+        <br/>
+        @Model.Message1
+        <br/>
+        <select asp-for=Month asp-items=Model.Month ></select>
+
+        <button type="submit"> Submit Days</button>
+        <br/>
+        @Model.Message
+    </form>
+</body>
+</html>
