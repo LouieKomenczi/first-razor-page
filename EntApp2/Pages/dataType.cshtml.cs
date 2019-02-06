@@ -28,7 +28,7 @@ namespace EntApp2.Pages
 
         [BindProperty]
         [DataType(DataType.Currency)]
-        public int Currency { get; set; }
+        public string Currency { get; set; }
 
         [BindProperty]
         [DataType(DataType.Text)]

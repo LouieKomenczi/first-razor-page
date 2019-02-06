@@ -20,6 +20,9 @@ namespace EntApp2.Pages
         [BindProperty]
         public bool[] DaysSelected { get; set; } = { false, false, false, false, false, false, false };
 
+        [BindProperty]
+        public string[] MonthSelected { get; set; } = { };
+
         public List<SelectListItem> Month { get; } =
             new List<SelectListItem>
             {
@@ -36,21 +39,22 @@ namespace EntApp2.Pages
                 new SelectListItem {Value = "November", Text="November"},
                 new SelectListItem {Value = "December", Text="December"}
             };
-
+        
         public void OnPost()
         {
-            int j = 0;
-            for(int i=0; i<7; i++)
+            if(MonthSelected.Length == 0)
             {
-                if (DaysSelected[i] == true)
-                {
-                    Message[j] = Days[i];
-                    j++;
-
-                }
-                    
+                Message1 = "No month selected"; 
             }
-            Message1 = Request.Form["Month"];
+            else
+            {
+                Message1 = $"<ol>";
+                foreach (string month in MonthSelected)
+                {
+                    Message1 += $"<li>{month}</li>";
+                }
+                Message1 += $"</ol>";
+            }
         }
 
         public void OnGet()
