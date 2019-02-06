@@ -1,0 +1,32 @@
+﻿@page
+@model EntApp2.Pages.dataTypeModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>dataType</title>
+</head>
+<body>
+    <form method="post">
+        <label> Date <input asp-for=Date /> </label> <br />
+        <label> Time <input asp-for=Time /> </label> <br />
+        <label> Duration<input asp-for=Duration /> </label> <br />
+        <label>Phone Number <input asp-for=PhoneNumber /> </label> <br />
+        <label>Currency <input asp-for=Currency /> </label> <br />
+        <label> Text <input asp-for=Text /> </label> <br />
+        <label>HTML <input asp-for=Html /></label>  <br />
+        <label>Email<input asp-for=EmailAddress /></label> <br />
+        <label>Multiline text <input asp-for=MultilineText /></label> <br/>
+        <label>PSWD <input asp-for=Password /> </label> 
+
+        <button type="submit"> Submit Days</button>
+    </form>
+    
+</body>
+</html>

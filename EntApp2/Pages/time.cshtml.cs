@@ -10,8 +10,10 @@ namespace EntApp2.Pages
 {
     public class timeModel : PageModel
     {
-        public string Message { get; set; }
+        public string[] Message= new string[7];
         public string Message1 { get; set; }
+
+        
 
         public string[] Days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
@@ -37,12 +39,18 @@ namespace EntApp2.Pages
 
         public void OnPost()
         {
+            int j = 0;
             for(int i=0; i<7; i++)
             {
                 if (DaysSelected[i] == true)
-                    Message1 += Days[i];
+                {
+                    Message[j] = Days[i];
+                    j++;
+
+                }
+                    
             }
-            Message = Request.Form["Month"];
+            Message1 = Request.Form["Month"];
         }
 
         public void OnGet()
